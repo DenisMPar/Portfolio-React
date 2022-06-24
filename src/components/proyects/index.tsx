@@ -3,6 +3,7 @@ import { useRecoilValue } from "recoil";
 import { InfoGrid } from "../InfoGrid";
 import { useGetProyectsData } from "../../hooks";
 import { ProyectsContainer, ProyectsTitle, ProyectWrapper } from "./elements";
+import Slider from "react-slick";
 
 export const Proyects = (props) => {
   const data = useRecoilValue(useGetProyectsData);
@@ -15,6 +16,7 @@ export const Proyects = (props) => {
         {data.map((item) => {
           return (
             <InfoGrid
+              techs={item.techs}
               img={item.imgUrl}
               type="proyect"
               title={item.proyectTitle}

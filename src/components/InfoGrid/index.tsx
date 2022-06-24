@@ -11,8 +11,11 @@ import {
   Subtitle,
   TextWrapp,
   BtnWrap,
+  TechsWrap,
+  TechsSpan,
 } from "./infoGridElements";
 import { Button } from "../../ui/button";
+import Tilt from "react-parallax-tilt";
 
 type props = {
   type: "info" | "proyect";
@@ -21,11 +24,12 @@ type props = {
   img: any;
   webLink?: string;
   gitHubLink?: string;
+  techs: object;
 };
 
 function InfoGrid(props: props) {
   return (
-    <InfoGridCont lightBack={false}>
+    <InfoGridCont>
       <InfoGridWrapp>
         <InfoGridRow>
           <Column1>
@@ -34,28 +38,38 @@ function InfoGrid(props: props) {
               <Subtitle darkText={false}>{props.subtitle}</Subtitle>
             </TextWrapp>
             {props.type == "proyect" ? (
-              <BtnWrap>
-                <a
-                  href={props.webLink}
-                  style={{ textDecoration: "none" }}
-                  target="_blank"
-                >
-                  <Button>Proyecto</Button>
-                </a>
-                <a
-                  href={props.gitHubLink}
-                  style={{ textDecoration: "none" }}
-                  target="_blank"
-                >
-                  <Button>Código</Button>
-                </a>
-              </BtnWrap>
+              <>
+                <TechsWrap>
+                  Tecnologías:
+                  {Object.entries(props.techs).map((item) => {
+                    return <TechsSpan>{item[1]}</TechsSpan>;
+                  })}
+                </TechsWrap>
+                <BtnWrap>
+                  <a
+                    href={props.webLink}
+                    style={{ textDecoration: "none" }}
+                    target="_blank"
+                  >
+                    <Button>Proyecto</Button>
+                  </a>
+                  <a
+                    href={props.gitHubLink}
+                    style={{ textDecoration: "none" }}
+                    target="_blank"
+                  >
+                    <Button>Código</Button>
+                  </a>
+                </BtnWrap>
+              </>
             ) : null}
           </Column1>
           <Column2>
-            <ImgWrap>
-              <Img src={props.img} />
-            </ImgWrap>
+            <Tilt>
+              <ImgWrap>
+                <Img src={props.img} />
+              </ImgWrap>
+            </Tilt>
           </Column2>
         </InfoGridRow>
       </InfoGridWrapp>

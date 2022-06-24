@@ -65,8 +65,10 @@ export const useGetProyectsData = selector({
   get: ({ get }) => {
     const state = get(cmsState);
     const proyects = state.filter((item) => item.proyectTitle);
+
     const formatedProyects = proyects.map((proyect) => {
       return {
+        techs: proyect.techs,
         proyectTitle: proyect.proyectTitle,
         imgUrl: getCmsImgUrl(proyect.proyectPreviewImg),
         gitHubLink: proyect.gitHubLink,

@@ -18,7 +18,6 @@ function AboutMe() {
 
   return (
     <AboutMeCont lightBack={false} id="about">
-      s
       <AboutMeWrapp>
         <AboutMeRow>
           <Column1>

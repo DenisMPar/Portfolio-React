@@ -21,6 +21,7 @@ export const ServiceIconWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #000;
+
   @media screen and (max-width: 768px) {
     height: 130px;
     width: 130px;

@@ -40,6 +40,7 @@ export const ProyectWrapper = styled.div`
   background-color: #d93425;
   grid-gap: 15px;
   border-radius: 4px;
+  padding: 0;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);

@@ -1,19 +1,12 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 
-type containerProps = {
-  lightBack: any;
-};
-export const InfoGridCont = styled.div<containerProps>`
+export const InfoGridCont = styled.div`
   position: relative;
   color: #fff;
   border-radius: 4px;
   padding: 15px;
-  background: ${({ lightBack }) => (lightBack ? "#f9f9f9" : "#010606")};
-
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
+  background: #1f1f1f;
 `;
 
 export const InfoGridWrapp = styled.div`
@@ -26,6 +19,7 @@ export const InfoGridWrapp = styled.div`
   margin-right: auto;
   padding: 0 24px;
   justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 `;
 
 export const InfoGridRow = styled.div`
@@ -85,6 +79,24 @@ export const Subtitle = styled.p<subtitleProps>`
   }
   @media screen and (max-width: 480px) {
     font-size: 14px;
+  }
+`;
+
+export const TechsWrap = styled.div`
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
+`;
+export const TechsSpan = styled.div`
+  font-size: 0.85rem;
+  background-color: #d93425;
+  border-radius: 10px;
+  padding: 4px;
+  &:hover {
+    padding: 4px 6px;
   }
 `;
 
