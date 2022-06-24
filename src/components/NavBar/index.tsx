@@ -27,7 +27,7 @@ export const NavBar = (props: props) => {
             <NavLinks to="about">Acerca de Mi</NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="about">Proyectos</NavLinks>
+            <NavLinks to="proyects">Proyectos</NavLinks>
           </NavItem>
           <NavItem>
             <NavLinks to="services">Servicios</NavLinks>
