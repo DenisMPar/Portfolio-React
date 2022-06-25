@@ -31,10 +31,18 @@ export const SideBar = (props: props) => {
             </Icon>
             <SideBarMenuWrap>
               <SideBarMenu>
-                <SidebarLink to="about">Acerca de mi</SidebarLink>
-                <SidebarLink to="proyects">Proyectos</SidebarLink>
-                <SidebarLink to="services">Servicios</SidebarLink>
-                <SidebarLink to="contact">Contacto</SidebarLink>
+                <SidebarLink to="about" onClick={props.toggle}>
+                  Acerca de mi
+                </SidebarLink>
+                <SidebarLink to="proyects" onClick={props.toggle}>
+                  Proyectos
+                </SidebarLink>
+                <SidebarLink to="services" onClick={props.toggle}>
+                  Servicios
+                </SidebarLink>
+                <SidebarLink to="contact" onClick={props.toggle}>
+                  Contacto
+                </SidebarLink>
               </SideBarMenu>
             </SideBarMenuWrap>
           </SideBarContainer>
