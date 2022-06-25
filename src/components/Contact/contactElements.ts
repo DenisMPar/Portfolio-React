@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContactContainer = styled.div`
   display: grid;
   z-index: 1;
-  height: calc(100vh - 100px);
+  height: 100vh;
   width: 100%;
   max-width: 1100px;
   margin-left: auto;

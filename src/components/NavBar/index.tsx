@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
+import { animateScroll } from "react-scroll";
 import {
   MobileMenuIcon,
   Nav,
@@ -14,29 +15,49 @@ type props = {
   toggle: () => any;
 };
 
-export const NavBar = (props: props) => {
+export function NavBar(props: props) {
+  function scrollTop() {
+    animateScroll.scrollToTop();
+  }
+
   return (
     <Nav>
       <NavBarContainer>
-        <NavLogo to="hero">Denis</NavLogo>
+        <NavLogo to="hero" onClick={() => scrollTop()}>
+          Denis
+        </NavLogo>
         <MobileMenuIcon onClick={props.toggle}>
           <FaBars></FaBars>
         </MobileMenuIcon>
         <NavMenu>
           <NavItem>
-            <NavLinks to="about">Acerca de Mi</NavLinks>
+            <NavLinks to="about" smooth={true} duration={500} spy={true}>
+              Acerca de Mi
+            </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="proyects">Proyectos</NavLinks>
+            <NavLinks
+              to="proyects"
+              smooth={true}
+              duration={500}
+              spy={true}
+              activeClass={"active"}
+            >
+              Proyectos
+            </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="services">Servicios</NavLinks>
+            <NavLinks to="services" smooth={true} duration={500} spy={true}>
+              Servicios
+            </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="contact">Contacto</NavLinks>
+            <NavLinks to="contact" smooth={true} duration={500} spy={true}>
+              Contacto
+            </NavLinks>
           </NavItem>
         </NavMenu>
       </NavBarContainer>
     </Nav>
   );
-};
+}

@@ -79,7 +79,7 @@ export const NavLinks = styled(LinkScroll)`
     color: #f54a1a;
   }
 
-  &:active {
+  &.active {
     border-bottom: 5px solid #f54a1a;
   }
 `;
