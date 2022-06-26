@@ -42,7 +42,7 @@ function InfoGrid(props: props) {
                 <TechsWrap>
                   Tecnologías:
                   {Object.entries(props.techs).map((item) => {
-                    return <TechsSpan>{item[1]}</TechsSpan>;
+                    return <TechsSpan key={item[1]}>{item[1]}</TechsSpan>;
                   })}
                 </TechsWrap>
                 <BtnWrap>

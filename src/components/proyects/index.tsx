@@ -23,6 +23,7 @@ export const Proyects = (props) => {
               subtitle={item.proyectDescription}
               webLink={item.webLink}
               gitHubLink={item.gitHubLink}
+              key={item.proyectTitle}
             ></InfoGrid>
           );
         })}

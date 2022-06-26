@@ -7,6 +7,7 @@ import { Services } from "../../components/Services";
 import { Contact } from "../../components/Contact";
 import { useGetPageData, useShowPage } from "../../hooks";
 import { Proyects } from "../../components/proyects";
+import { Footer } from "../../components/Footer";
 
 //try
 function Home() {
@@ -26,6 +27,7 @@ function Home() {
         <Proyects></Proyects>
         <Services />
         <Contact></Contact>
+        <Footer></Footer>
       </div>
     </>
   );

@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const ContactContainer = styled.div`
   display: grid;
   z-index: 1;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
   max-width: 1100px;
   margin-left: auto;
@@ -19,6 +20,7 @@ export const ContactContainer = styled.div`
 `;
 
 export const ContactRow = styled.div`
+  height: 100%;
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;

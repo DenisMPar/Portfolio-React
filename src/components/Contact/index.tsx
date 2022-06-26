@@ -10,7 +10,7 @@ import {
   Img,
 } from "./contactElements";
 import { ContactForm } from "../ContactForm";
-import source from "../../images/aboutMe.svg";
+import source from "../../images/contact.svg";
 
 function Contact() {
   return (
