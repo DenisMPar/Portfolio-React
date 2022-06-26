@@ -18,16 +18,19 @@ export function Footer() {
         <FooterTitle>Mis Redes</FooterTitle>
       </SocialMediaWrapp>
       <SocialMediaWrapp>
-        <a href="https://github.com/DenisMPar">
+        <a target="_blank" href="https://github.com/DenisMPar">
           <GithubLogo></GithubLogo>
         </a>
-        <a href="https://www.linkedin.com/in/denismpar/">
+        <a target="_blank" href="https://www.linkedin.com/in/denismpar/">
           <LinkedinLogo></LinkedinLogo>
         </a>
-        <a href="mailto:denispar.dev@gmail.com">
+        <a target="_blank" href="mailto:denispar.dev@gmail.com">
           <GmailLogo></GmailLogo>
         </a>
-        <a href="https://apx.school/profile/3c628fea-56a7-4752-ae6c-caada303fe28">
+        <a
+          target="_blank"
+          href="https://apx.school/profile/3c628fea-56a7-4752-ae6c-caada303fe28"
+        >
           <ApxLogo>
             <img
               style={{ width: "100%", height: "100%" }}
