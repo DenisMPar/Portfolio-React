@@ -19,7 +19,6 @@ export const ProyectsContainer = styled.div`
 `;
 
 export const ProyectsTitle = styled.h1`
-  /* margin-bottom: 50px; */
   margin-top: 20px;
   font-size: 48px;
   line-height: 1.1;

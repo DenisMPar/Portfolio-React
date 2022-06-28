@@ -43,7 +43,7 @@ export const Column2 = styled.div`
 
 export const FormWrapp = styled.div`
   max-width: 540px;
-  padding: 0; /* padding-bottom: 60px; */
+  padding: 0;
 `;
 export const ContactTitle = styled.h1`
   margin-top: 20px;

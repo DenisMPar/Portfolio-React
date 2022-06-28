@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import { NavLogo } from "../NavBar/navElements";
 import { BiCopyright } from "react-icons/bi";
 import {
   GithubLogo,
@@ -10,7 +8,7 @@ import {
   SocialMediaWrapp,
   FooterTitle,
   ContainerCopy,
-} from "./footerelements";
+} from "./footerElements";
 export function Footer() {
   return (
     <MyFooter>

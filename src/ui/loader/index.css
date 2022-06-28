@@ -1,25 +1,31 @@
-.root {
+
+.wrapper{
+  
   display: flex;
-  min-height: 100%;
   justify-content: center;
   align-items: center;
 }
-.spinner {
-  margin: auto;
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border-left-color: #09f;
 
-  animation: spin 1s ease infinite;
+.lds-dual-ring {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  
 }
-
-@keyframes spin {
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }

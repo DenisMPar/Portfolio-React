@@ -1,4 +1,3 @@
-import React from "react";
 import { useSpring } from "react-spring";
 import {
   HeroBackGround,
@@ -33,7 +32,7 @@ function Hero(props) {
       </HeroBackGround>
       <HeroContent style={styled}>
         <HeroTitle>Denis Parada</HeroTitle>
-        <HeroP>Fullstack Developer</HeroP>
+        <HeroP>Desarrollador Web Fullstack </HeroP>
       </HeroContent>
     </HeroContainer>
   );

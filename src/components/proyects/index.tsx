@@ -1,13 +1,10 @@
-import React from "react";
 import { useRecoilValue } from "recoil";
 import { InfoGrid } from "../InfoGrid";
 import { useGetProyectsData } from "../../hooks";
 import { ProyectsContainer, ProyectsTitle, ProyectWrapper } from "./elements";
-import Slider from "react-slick";
 
-export const Proyects = (props) => {
+export function Proyects() {
   const data = useRecoilValue(useGetProyectsData);
-  console.log("proyects", data);
 
   return (
     <ProyectsContainer id="proyects">
@@ -30,4 +27,4 @@ export const Proyects = (props) => {
       </ProyectWrapper>
     </ProyectsContainer>
   );
-};
+}

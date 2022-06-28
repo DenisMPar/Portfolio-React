@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   CardsWrapper,
   ServicesContainer,
@@ -6,10 +6,9 @@ import {
 } from "./servicesElements";
 import { ServicesCard } from "../../ui/servicesCard";
 import { useRecoilValue, useRecoilRefresher_UNSTABLE } from "recoil";
-import { cmsState, useGetServicesData } from "../../hooks";
+import { useGetServicesData } from "../../hooks";
 
 function Services() {
-  const state = useRecoilValue(cmsState);
   const services = useRecoilValue(useGetServicesData);
   const refresh = useRecoilRefresher_UNSTABLE(useGetServicesData);
 

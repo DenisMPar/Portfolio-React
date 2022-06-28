@@ -8,6 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.5",
+    "@sendgrid/mail": "^7.7.0",
     "@types/react-scroll": "^1.8.3",
     "contentful": "^9.1.32",
     "fetch-json": "^2.6.5",
@@ -20,6 +22,7 @@
     "react-scroll": "^1.8.7",
     "react-slick": "^0.29.0",
     "react-spring": "^9.4.5",
+    "react-toastify": "^9.0.5",
     "recoil": "^0.7.4",
     "recoil-persist": "^4.2.0",
     "slick-carousel": "^1.8.1",

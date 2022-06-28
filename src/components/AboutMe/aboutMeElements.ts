@@ -48,7 +48,7 @@ export const Column2 = styled.div`
 
 export const TextWrapp = styled.div`
   max-width: 540px;
-  padding: 0; /* padding-bottom: 60px; */
+  padding: 0;
 `;
 
 type headingProps = {

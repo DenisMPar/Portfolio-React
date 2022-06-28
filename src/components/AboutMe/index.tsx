@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   AboutMeCont,
   AboutMeRow,
@@ -14,8 +13,6 @@ import {
 import source from "../../images/aboutMe.svg";
 
 function AboutMe() {
-  // const data = useRecoilValue(useGetAboutMeData);
-
   return (
     <AboutMeCont lightBack={false} id="about">
       <AboutMeWrapp>

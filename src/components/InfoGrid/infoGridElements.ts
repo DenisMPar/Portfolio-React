@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { animated } from "react-spring";
 
 export const InfoGridCont = styled.div`
   position: relative;
@@ -46,7 +45,7 @@ export const Column2 = styled.div`
 
 export const TextWrapp = styled.div`
   max-width: 540px;
-  padding: 0; /* padding-bottom: 60px; */
+  padding: 0;
 `;
 
 type headingProps = {
@@ -63,7 +62,6 @@ export const Heading = styled.p<headingProps>`
     font-size: 32px;
   }
 `;
-/* ; */
 
 type subtitleProps = {
   darkText: any;

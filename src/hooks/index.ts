@@ -1,16 +1,12 @@
+import { EmailData } from "@sendgrid/helpers/classes/email-address";
 import { useEffect, useState } from "react";
-import { atom, selector, useRecoilState } from "recoil";
+import { atom, selector, useSetRecoilState } from "recoil";
+
 import { getCmsContent } from "../lib/api";
 
-export async function useGetCmsData() {
-  const [cmsData, setCmsData] = useState(null);
-  const data = await getCmsContent();
-  setCmsData(data);
-  return cmsData;
-}
 export const cmsState = atom({
   key: "cmsState",
-  default: [],
+  default: null,
 });
 
 //cambia el display del home a block cuando termina de cargar el video
@@ -27,7 +23,7 @@ export const useShowPage = () => {
 };
 //trae toda la data desde contenful
 export const useGetPageData = () => {
-  const [state, setState] = useRecoilState(cmsState);
+  const setState = useSetRecoilState(cmsState);
   useEffect(() => {
     const getData = async () => {
       const data = await getCmsContent();
@@ -46,7 +42,7 @@ function getCmsDescription(object) {
 
 //devuelve los datos de servicios del state
 export const useGetServicesData = selector({
-  key: "useGetCmsData",
+  key: "useGetServicesData",
   get: ({ get }) => {
     const state = get(cmsState);
     const services = state.filter((item) => item.serviceTitle);
@@ -95,12 +91,3 @@ export const useGetAboutMeData = selector({
     }
   },
 });
-// export const useGetCmsData = selector({
-//   key: "useGetCmsData",
-//   get: async ({ get }) => {
-//     const pets = await getCmsContent();
-//     //si hay mascotas cerca devuevlo el array pets, si no devuelvo false
-//     //esto es porque si devuelvo el array vacio me lo toma como truthy y no renderiza bien la pagina
-//     return pets.length > 0 ? pets : false;
-//   },
-// });

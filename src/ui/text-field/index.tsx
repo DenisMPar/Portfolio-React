@@ -1,4 +1,3 @@
-import React from "react";
 import { FieldContainer, TextInput, TextLabel } from "./textFieldElements";
 type props = {
   label: string;

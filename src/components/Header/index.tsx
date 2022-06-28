@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavBar } from "../NavBar";
 import { SideBar } from "../SideBar";
 
@@ -12,6 +12,7 @@ function Header() {
   return (
     <>
       <SideBar show={flag} toggle={toggleMenu}></SideBar>
+
       <NavBar toggle={toggleMenu}></NavBar>
     </>
   );
