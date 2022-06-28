@@ -8,7 +8,7 @@ import {
   SocialMediaWrapp,
   FooterTitle,
   ContainerCopy,
-} from "./footerElements";
+} from "./footerelements";
 export function Footer() {
   return (
     <MyFooter>
