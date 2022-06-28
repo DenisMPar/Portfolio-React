@@ -28,7 +28,7 @@ function Home() {
           }}
         >
           <Header />
-          <ToastContainer />
+          <ToastContainer autoClose={false} />
           <Hero toggle={toggle} />
           <AboutMe />
           <Proyects></Proyects>

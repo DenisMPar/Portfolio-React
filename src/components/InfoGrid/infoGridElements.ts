@@ -101,6 +101,7 @@ export const TechsSpan = styled.div`
 export const BtnWrap = styled.div`
   margin-top: 15px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   gap: 20px;
 `;
