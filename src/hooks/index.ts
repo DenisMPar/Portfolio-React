@@ -9,7 +9,7 @@ export const cmsState = atom({
   default: null,
 });
 
-//cambia el display del home a block cuando termina de cargar el video
+//cambia el display del home cuando termina de cargar el video
 export const useShowPage = () => {
   const [flag, setFlag] = useState(false);
   const [display, setDisplay] = useState("none");
