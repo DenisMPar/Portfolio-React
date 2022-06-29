@@ -22,6 +22,7 @@ function ContactForm() {
 
   async function handleSubmit(e) {
     await handleMail(e);
+
     if (state.succeeded && !state.submitting) {
       e.target.reset();
     }
