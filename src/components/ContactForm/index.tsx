@@ -3,15 +3,18 @@ import { Button } from "../../ui/button";
 import { MyForm, TextArea, TextInput, TextLabel } from "./contactFormElements";
 import { useForm, ValidationError } from "@formspree/react";
 import { LoaderComp } from "../../ui/loader";
+import { useRef } from "react";
 
 function ContactForm() {
   const [state, handleMail] = useForm(import.meta.env.VITE_FORMSPREE_ID);
+  const contactFormRef = useRef(null);
 
   if (state.succeeded && !state.submitting) {
     toast.success("mensaje enviado", {
       hideProgressBar: true,
       position: "bottom-center",
     });
+    contactFormRef.current.reset();
   }
   if (state.errors.length > 0 && !state.submitting) {
     toast.error("algo salio mal", {
@@ -20,16 +23,8 @@ function ContactForm() {
     });
   }
 
-  async function handleSubmit(e) {
-    await handleMail(e);
-
-    if (state.succeeded && !state.submitting) {
-      e.target.reset();
-    }
-  }
-
   return (
-    <MyForm onSubmit={handleSubmit}>
+    <MyForm onSubmit={handleMail} ref={contactFormRef}>
       <TextLabel htmlFor="name">
         Nombre
         <TextInput id="name" name="name" required={true}></TextInput>
