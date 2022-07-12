@@ -63,10 +63,14 @@ export const useGetProyectsData = selector({
     const proyects = state.filter((item) => item.proyectTitle);
 
     const formatedProyects = proyects.map((proyect) => {
+      console.log(proyect);
+
       return {
         techs: proyect.techs,
         proyectTitle: proyect.proyectTitle,
         imgUrl: getCmsImgUrl(proyect.proyectPreviewImg),
+        movilUrl: getCmsImgUrl(proyect.imgMovil),
+        mediumUrl: getCmsImgUrl(proyect.imgMedium),
         gitHubLink: proyect.gitHubLink,
         webLink: proyect.webLink,
         proyectDescription: getCmsDescription(proyect.proyectDescription),
@@ -91,3 +95,15 @@ export const useGetAboutMeData = selector({
     }
   },
 });
+
+export function useGetWidth() {
+  const [width, setWidth] = useState("movil");
+  useEffect(() => {
+    if (window.innerWidth < 480) setWidth("movil");
+
+    if (window.innerWidth < 769) setWidth("medium");
+
+    if (window.innerWidth >= 769) setWidth("large");
+  }, []);
+  return width;
+}

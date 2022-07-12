@@ -1,10 +1,12 @@
 import { useRecoilValue } from "recoil";
 import { InfoGrid } from "../InfoGrid";
-import { useGetProyectsData } from "../../hooks";
+import { useGetProyectsData, useGetWidth } from "../../hooks";
 import { ProyectsContainer, ProyectsTitle, ProyectWrapper } from "./elements";
+import { useState } from "react";
 
 export function Proyects() {
   const data = useRecoilValue(useGetProyectsData);
+  const width = useGetWidth();
 
   return (
     <ProyectsContainer id="proyects">
@@ -14,7 +16,13 @@ export function Proyects() {
           return (
             <InfoGrid
               techs={item.techs}
-              img={item.imgUrl}
+              img={
+                width == "large"
+                  ? item.imgUrl
+                  : width == "medium"
+                  ? item.mediumUrl
+                  : item.movilUrl
+              }
               type="proyect"
               title={item.proyectTitle}
               subtitle={item.proyectDescription}
