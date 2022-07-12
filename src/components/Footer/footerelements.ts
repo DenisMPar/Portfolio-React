@@ -36,7 +36,7 @@ export const SocialMediaWrapp = styled.div`
 export const ApxLogo = styled.div`
   background-color: #ff6136;
   padding: 5px;
-  width: 80px;
+  width: 90px;
   height: 100%;
   object-fit: cover;
   align-items: center;
@@ -48,7 +48,7 @@ export const ApxLogo = styled.div`
     background-color: #ff7b36;
   }
   @media screen and (max-width: 480px) {
-    width: 60px;
+    width: 70px;
   }
 `;
 export const GithubLogo = styled(BsGithub)`

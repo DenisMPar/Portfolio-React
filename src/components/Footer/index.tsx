@@ -16,19 +16,63 @@ export function Footer() {
         <FooterTitle>Mis Redes</FooterTitle>
       </SocialMediaWrapp>
       <SocialMediaWrapp>
-        <a target="_blank" href="https://github.com/DenisMPar">
+        <a
+          target="_blank"
+          href="https://github.com/DenisMPar"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            textDecoration: "none",
+            color: "#fff",
+            alignItems: "center",
+          }}
+        >
+          GitHub
+          <span style={{ display: "none" }}>Github</span>
           <GithubLogo></GithubLogo>
         </a>
-        <a target="_blank" href="https://www.linkedin.com/in/denismpar/">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/denismpar/"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            textDecoration: "none",
+            color: "#fff",
+            alignItems: "center",
+          }}
+        >
+          Linkedin
           <LinkedinLogo></LinkedinLogo>
         </a>
-        <a target="_blank" href="mailto:denispar.dev@gmail.com">
+        <a
+          target="_blank"
+          href="mailto:denispar.dev@gmail.com"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            textDecoration: "none",
+            color: "#fff",
+            alignItems: "center",
+          }}
+        >
+          Gmail
           <GmailLogo></GmailLogo>
         </a>
         <a
           target="_blank"
           href="https://apx.school/profile/3c628fea-56a7-4752-ae6c-caada303fe28"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            textDecoration: "none",
+            color: "#fff",
+            alignItems: "center",
+            minHeight: "100%",
+            placeSelf: "start",
+          }}
         >
+          Apx
           <ApxLogo>
             <img
               alt="Logo Apx"
