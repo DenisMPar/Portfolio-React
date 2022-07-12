@@ -23,7 +23,7 @@ function Contact() {
         </Column1>
         <Column2>
           <ImgWrap>
-            <Img src={source} />
+            <Img alt="Icon of Contacto" src={source} />
           </ImgWrap>
         </Column2>
       </ContactRow>

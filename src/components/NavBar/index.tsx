@@ -22,7 +22,7 @@ export function NavBar(props: props) {
   return (
     <Nav>
       <NavBarContainer>
-        <NavLogo to="hero" onClick={() => scrollTop()}>
+        <NavLogo href="#hero" to="hero" onClick={() => scrollTop()}>
           Denis
         </NavLogo>
         <MobileMenuIcon onClick={props.toggle}>
@@ -30,12 +30,19 @@ export function NavBar(props: props) {
         </MobileMenuIcon>
         <NavMenu>
           <NavItem>
-            <NavLinks to="about" smooth={true} duration={500} spy={true}>
+            <NavLinks
+              href="#about"
+              to="about"
+              smooth={true}
+              duration={500}
+              spy={true}
+            >
               Acerca de Mi
             </NavLinks>
           </NavItem>
           <NavItem>
             <NavLinks
+              href="#proyects"
               to="proyects"
               smooth={true}
               duration={500}
@@ -46,12 +53,24 @@ export function NavBar(props: props) {
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="services" smooth={true} duration={500} spy={true}>
+            <NavLinks
+              href="#services"
+              to="services"
+              smooth={true}
+              duration={500}
+              spy={true}
+            >
               Servicios
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="contact" smooth={true} duration={500} spy={true}>
+            <NavLinks
+              href="#contact"
+              to="contact"
+              smooth={true}
+              duration={500}
+              spy={true}
+            >
               Contacto
             </NavLinks>
           </NavItem>

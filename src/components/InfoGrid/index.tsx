@@ -66,7 +66,7 @@ function InfoGrid(props: props) {
           <Column2>
             <Tilt>
               <ImgWrap>
-                <Img src={props.img} />
+                <Img alt={"icon of " + props.title} src={props.img} />
               </ImgWrap>
             </Tilt>
           </Column2>

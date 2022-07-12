@@ -31,6 +31,7 @@ export function Footer() {
         >
           <ApxLogo>
             <img
+              alt="Logo Apx"
               style={{ width: "100%", height: "100%" }}
               src="https://res.cloudinary.com/dnamyvmsq/image/upload/apx/branding/apx-logo-over-yellow.png"
             ></img>

@@ -31,6 +31,7 @@ export const SideBar = (props: props) => {
             <SideBarMenuWrap>
               <SideBarMenu>
                 <SidebarLink
+                  href="#about"
                   to="about"
                   onClick={props.toggle}
                   smooth={true}
@@ -40,6 +41,7 @@ export const SideBar = (props: props) => {
                   Acerca de mi
                 </SidebarLink>
                 <SidebarLink
+                  href="#proyects"
                   to="proyects"
                   onClick={props.toggle}
                   smooth={true}
@@ -49,6 +51,7 @@ export const SideBar = (props: props) => {
                   Proyectos
                 </SidebarLink>
                 <SidebarLink
+                  href="#services"
                   to="services"
                   onClick={props.toggle}
                   smooth={true}
@@ -58,6 +61,7 @@ export const SideBar = (props: props) => {
                   Servicios
                 </SidebarLink>
                 <SidebarLink
+                  href="#contact"
                   to="contact"
                   onClick={props.toggle}
                   smooth={true}

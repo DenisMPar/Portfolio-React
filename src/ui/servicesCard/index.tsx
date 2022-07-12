@@ -11,7 +11,7 @@ function ServicesCard(props) {
     <CardContainer>
       <CardTitle>{props.title}</CardTitle>
       <ServiceIconWrapper>
-        <ServiceIcon src={props.img} />
+        <ServiceIcon src={props.img} alt={"icon of " + props.title} />
       </ServiceIconWrapper>
     </CardContainer>
   );

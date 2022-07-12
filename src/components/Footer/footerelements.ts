@@ -13,7 +13,7 @@ export const MyFooter = styled.div`
   gap: 30px;
 `;
 
-export const FooterTitle = styled.h3`
+export const FooterTitle = styled.h2`
   font-size: 1.5rem;
 `;
 export const ContainerCopy = styled.div`

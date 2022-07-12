@@ -34,7 +34,7 @@ function AboutMe() {
           </Column1>
           <Column2>
             <ImgWrap>
-              <Img src={source} />
+              <Img alt="Icon of Acerca de mi" src={source} />
             </ImgWrap>
           </Column2>
         </AboutMeRow>
